@@ -13,7 +13,7 @@ export default async function NotesPage() {
   return (
     <div>
       <h1>Notes</h1>
-      <div>
+      <div className="note-container">
         {notes?.map((note) => {
           return <Note key={note.id} note={note} />;
         })}

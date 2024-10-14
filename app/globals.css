@@ -49,3 +49,8 @@ nav a {
   margin: 0 0.5rem;
   text-decoration: underline;
 }
+
+.note-container {
+  display: flex;
+  flex-direction: row;
+}
