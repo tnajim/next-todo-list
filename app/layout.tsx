@@ -8,6 +8,9 @@ export default function RootLayout({
 }) {
   return (
     <html>
+      <head>
+        <title>Next.js Notes App</title>
+      </head>
       <body>
         <main>
           <nav>
