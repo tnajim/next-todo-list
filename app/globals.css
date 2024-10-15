@@ -53,4 +53,5 @@ nav a {
 .note-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
