@@ -3,7 +3,7 @@ import styles from './Notes.module.css';
 import CreateNote from "./CreateNote";
 
 async function getNotes() {
-  const res = await fetch('http://127.0.0.1:8090/api/collections/notes/records?page=1&perPage=30', { cache: 'no-store' });
+  const res = await fetch('http://127.0.0.1:8090/api/collections/notes2/records?page=1&perPage=30', { cache: 'no-store' });
   const data = await res.json();
   return data?.items as any[];
 }
@@ -26,13 +26,12 @@ export default async function NotesPage() {
 }
 
 function Note({ note }: any) {
-  const { id, title, content, created } = note || {};
+  const { id, content, created } = note || {};
 
   return (
     <Link href={`/notes/${id}`}>
       <div className={styles.note}>
-        <h2>{title}</h2>
-        <h5>{content}</h5>
+        <h3>{content}</h3>
         <p>{created}</p>
       </div>
     </Link>
