@@ -1,6 +1,6 @@
 
-import Link from 'next/link';
-import styles from '../Notes.module.css';
+import styles from '../../Notes.module.css';
+import EditNote from './EditNote';
 
 async function getNote(noteId: string) {
   const res = await fetch(`http://127.0.0.1:8090/api/collections/notes2/records/${noteId}`,
@@ -22,9 +22,8 @@ export default async function NotePage({ params }: any) {
         <h3>{note.content}</h3>
         <p>{note.created}</p>
       </div>
-      <Link href={`/notes/${note.id}/edit`}>
-        <center><h4>Edit</h4></center>
-      </Link>
+
+      <EditNote note={note} />
     </div>
   )
-} 
+}
