@@ -1,5 +1,6 @@
 import Link from "next/link";
-import styles from './Notes.module.css';
+import styles from "./Notes.module.css";
+import DeleteNote from "./DeleteNote";
 
 export default function Note({ note }: any) {
   const { id, content, created } = note || {};
@@ -12,9 +13,12 @@ export default function Note({ note }: any) {
           <p>{created}</p>
         </div>
       </Link>
-      <Link href={`/notes/${id}/edit`}>
-        <div className="align-center"><h4>Edit</h4></div>
-      </Link>
+      <div className="align-center">
+        <Link href={`/notes/${id}/edit`}>
+          <h4>Edit</h4>
+        </Link>
+        <DeleteNote note={note} />
+      </div>
     </div>
-  )
+  );
 }
