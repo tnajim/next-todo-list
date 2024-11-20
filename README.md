@@ -1,4 +1,4 @@
-next-todo-list is a simple todo list crud app developed using next.js and pocketbase api
+**next-todo-list** is a simple todo list CRUD app developed using **[Next.js](https://nextjs.org/)** and the **[PocketBase API](https://pocketbase.io/)**.
 
 ## Prerequisites
 
